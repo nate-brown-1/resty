@@ -4,25 +4,26 @@
 
 ----------------------
 
-LAB - useState() Hook
-RESTy Phase 2: Retrieving User Input and Managing State.
+### LAB - useState() Hook
 
-Before you begin
-Refer to Getting Started in the lab submission instructions for complete setup, configuration, deployment, and submission instructions.
+RESTy Phase 2: Retrieving User Input and Managing State.
 
 Continue working in your ‘resty’ repository, extending your previous work in a new branch called ‘state’.
 
-Business Requirements
+### Business Requirements Lab 27
+
 Refer to the RESTy System Overview for a complete review of the application, including Business and Technical requirements along with the development roadmap.
 
-Phase 2 Requirements
+### Phase 2 Requirements
+
 In phase 2, we will be receiving user input in preparation of connecting to live APIs, using the useState() hook in our functional components. In order to properly manage state with the useState hook, we will now convert <App /> to a functional component.
 
 The following user stories detail the major functionality for this phase of the project.
 
 As a user, I want to enter the REST Method and URL to an API.
 As a user, I want to see a summary of my request as well as results returned from an API request in my browser in a readable format.
-Application Flow:
+
+### Application Flow
 
 User enters an API URL.
 Chooses a REST Method.
@@ -32,9 +33,8 @@ Displays the response headers and results separately.
 Both headers and results should be “pretty printed” JSON.
 One possible design/layout. Please use your judgement and taste in styling your version of this application.
 
-Resty
+### Technical Requirements / Note
 
-Technical Requirements / Note
 Extend your React Application so that your functional components are able to manage their own state variables using the useState() Hook.
 NOTE: It is not a requirement to make the actual API call. That can be mocked with “fake” data.
 
@@ -43,24 +43,30 @@ Refactor the Form Component to implement user input from form elements, instead 
 Suggested Component Hierarchy and Application Architecture:
 
 index.js - Entry Point.
-<App /> - Container.
+
+`<App />` - Container.
 Holds application state: The Request (from the form) and the Response (from the API).
 Hook that can update state.
 Renders 2 Child Components.
-<Form />
+
+`<Form />`
 Expects a function to be sent to it as a prop.
 Renders a URL entry form.
+
 A selection of REST methods to choose from (“get” should be the default).
 The active selection should be displayed/styled differently than the others.
 Renders a Textarea to allow the user to type in a JSON object for a POST or PUT request.
+
 On submit:
 Send the Form entries back to the <App /> using the method sent down in props.
 Form will run the API request.
 Toggle the “loading” status before and after the request.
-<Results />
+
+`<Results />`
 Conditionally renders “Loading” or the data depending on the status of the request.
 Renders the data as “pretty” JSON.
 Proposed File Structure
+
 In this proposal:
 
 Utilize Airbnb React/JSX Style Guide conventions.
@@ -97,11 +103,15 @@ Integration tests are placed in the __tests__ directory (testing more than one f
 ├── package-lock.json
 ├── package.json
 └── README.md
-Tests
+
+### Tests
+
 Utilize the React Testing Library framework installed with CRA.
 Assert that upon form submission the resulting data will be rendered in the output area.
 Install the GitHub action that will auto-run your tests on all check-ins.
-Stretch Goals
+
+### Stretch Goals
+
 Connect the App component to an API and make an actual call (focusing on GET) to the URL requested in the form.
 
 ## LAB 26 BELOW THIS LINE
@@ -126,7 +136,7 @@ Note: after completing the above step, CRA starter code will have been pushed to
 Immediately ACP after adding your newly created repo to GitHub; giving you the option to rollback changes to the base starter code if necessary.
 Create and work in a new branch for today called base.
 
-### Business Requirements
+### Business Requirements Lab 26
 
 Refer to the RESTy System Overview for a complete review of the application, including Business and Technical requirements along with the development roadmap.
 
@@ -141,13 +151,18 @@ The application, as written by our development team was done using class compone
 
 Refactor the RESTy application as follows:
 
+// DONE
 Convert all child components of `<App />` from classes to functions.
 The `<App />` component serves as the container for all sub-components of this application.
 Leave this component as a Class.
+
+// DONE
 Make sure all base styles for `<App />` are included in a .scss imported within the App.jsx file.
 Ensure that the `<Header />`, `<Footer />`, `<Results />` and `<Form />` components are imported using ES6 import syntax.
 Use .scss files to style each component.
 Each of the components use their own .scss file for styling.
+
+// DONE
 Core application functionality should remain unchanged.
 The `<Form />` component should:
 Call a function onSubmit() that updates the `<App />` component via a function sent down as a prop so that the app can process the form values.
