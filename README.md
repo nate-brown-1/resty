@@ -16,7 +16,7 @@ Refer to the RESTy System Overview for a complete review of the application, inc
 
 ### Phase 2 Requirements
 
-In phase 2, we will be receiving user input in preparation of connecting to live APIs, using the useState() hook in our functional components. In order to properly manage state with the useState hook, we will now convert <App /> to a functional component.
+In phase 2, we will be receiving user input in preparation of connecting to live APIs, using the useState() hook in our functional components. In order to properly manage state with the useState hook, we will now convert `<App />` to a functional component.
 
 The following user stories detail the major functionality for this phase of the project.
 
@@ -58,7 +58,7 @@ The active selection should be displayed/styled differently than the others.
 Renders a Textarea to allow the user to type in a JSON object for a POST or PUT request.
 
 On submit:
-Send the Form entries back to the <App /> using the method sent down in props.
+Send the Form entries back to the `<App />` using the method sent down in props.
 Form will run the API request.
 Toggle the “loading” status before and after the request.
 
