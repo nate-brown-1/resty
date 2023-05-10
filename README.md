@@ -1,5 +1,9 @@
 # resty
 
+## UML
+
+![resty UML version 1](./img/resty-uml-v1.png)
+
 ## LAB 27 BELOW THIS LINE
 
 ----------------------
