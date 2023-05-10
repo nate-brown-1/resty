@@ -12,7 +12,6 @@ import Form from './Components/Form';
 import Results from './Components/Results';
 
 function App() {
-  // const [ data, requestParams ] = useState();
 
   const [ data, setData ] = useState(null);
   const [requestParams, setRequestParams ] = useState({});
@@ -30,8 +29,6 @@ function App() {
     setData(data);
     setRequestParams(requestParams);
   }
-
-  // useState(
 
   return (
     <React.Fragment>
