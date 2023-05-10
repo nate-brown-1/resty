@@ -2,21 +2,23 @@ import React from 'react';
 
 import './Form.scss';
 
-// submit event handler helper function
-function handleSubmit(e, props) {
-  e.preventDefault();
-  const formData = {
-    method: 'GET',
-    url: 'https://pokeapi.co/api/v2/pokemon',
-  };
-  props.handleApiCall(formData);
-}
 
 // form functional component
 function Form(props) {
+
+  // submit event handler helper sub-function
+  const handleSubmit = e => {
+    e.preventDefault();
+    const formData = {
+      method: 'GET',
+      url: 'https://pokeapi.co/api/v2/pokemon',
+    };
+    props.handleApiCall(formData);
+  }
+  
   return (
     <>
-      <form onSubmit={handleSubmit(props)}>
+      <form onSubmit={handleSubmit}>
         <label >
           <span>URL: </span>
           <input name='url' type='text' />
