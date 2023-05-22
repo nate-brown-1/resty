@@ -1,24 +1,32 @@
 import React from 'react';
+import JsonFormatter from 'react-json-formatter';
+
+import './Results.scss';
+
+
+const jsonStyle = {
+  propertyStyle: { color: 'red' },
+  stringStyle: { color: 'green' },
+  numberStyle: { color: 'darkorange' }
+}
 
 // results functional component
-function Results(props) {
+function Results( props ) {
+  let resultsData = props.data;
   return (
-    <section>
-      <pre>{props.data ? JSON.stringify(props.data, undefined, 2) : null}</pre>
+    <section className="resultsClass">
+      <pre data-testid='test-results'>
+        {
+          resultsData &&
+          <JsonFormatter
+            json={resultsData}
+            tabWith={4}
+            jsonStyle={jsonStyle}
+          />
+        }
+      </pre>
     </section>
   );
 }
-
-// leave class component version for reference
-
-// class Results extends React.Component {
-//   render() {
-//     return (
-//       <section>
-//         <pre>{this.props.data ? JSON.stringify(this.props.data, undefined, 2) : null}</pre>
-//       </section>
-//     );
-//   }
-// }
 
 export default Results;
