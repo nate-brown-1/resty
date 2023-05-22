@@ -4,6 +4,18 @@
 
 ![resty UML version 1](./img/resty-uml-v1.png)
 
+## Current State of This App
+
+All functional components
+
+API calls work
+
+API results rendered in pretty JSON
+
+Integration and unit tests written and passing
+
+Tests run automatically with GitHub Workflows
+
 ## LAB 28 BELOW THIS LINE
 
 ----------------------
