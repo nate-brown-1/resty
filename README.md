@@ -33,8 +33,10 @@ One possible design/layout. Please use your judgement and taste in styling your 
 
 ### Technical Requirements / Note Lab 28
 
+// DONE
 Extend your application to include the ability to send http requests and display response data, when the `<Form />` component experiences a submission event.  
 
+// DONE
 Refactor application methods to allow for browser side HTTP requests to be sent.  
 Your implementation should allow the user to set a url, method, and request body.  
 Make sure all relevant request and response data is displayed to the User.  

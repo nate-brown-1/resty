@@ -38,7 +38,7 @@ function Form(props) {
         <label >
           <span>URL: </span>
           <input data-testid="url-input" name="url" placeholder="http://www.api.url" onChange={handleUrlInput} />
-          <button type="submit">GO!</button>
+          <button data-testid="submit-button" type="submit">GO!</button>
         </label>
         <label className="methods">
           <span id="get" onClick={handleMethodInput}>GET</span>
